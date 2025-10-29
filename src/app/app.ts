@@ -1,12 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { User } from './user/user';
+import { Games } from "./games/games";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [User, Games],
   templateUrl: './app.html',
   styleUrl: './app.scss'
+
 })
 export class App {
-  protected readonly title = signal('mi-app');
+  city = 'Madrid...';
 }

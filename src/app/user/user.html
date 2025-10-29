@@ -1,0 +1,21 @@
+<section>
+
+    @if (isLoggedIn) {
+        <p>Bienvenido {{username}}</p>
+        <img
+        (dblclick)="greet()"
+        alt="photo" 
+        src="https://github.com/DanielSlavulete.png">
+        <app-games username="{{username}}"></app-games>
+    }@else {
+        <p>TIENES QUE INICIAR SESION!!!</p>
+        <button (click)="isLoggedIn=true">Loggeate!</button>
+    }
+
+
+
+</section>
+
+
+
+
